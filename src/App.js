@@ -18,7 +18,7 @@ import { CssBaseline, Hidden, MuiThemeProvider, theme, withStyles, drawerWidth, 
 import "./theme/css/index.css";
 import { AllMenus } from "./includes/Menus";
 import { LeftSidebar, TopHeader } from "./layout";
-import { userIsLoggedIn, handleDrawerToggle, requireLogin } from "./includes/Functions";
+import { userIsLoggedIn, handleDrawerToggle, pageRedirect } from "./includes/Functions";
 
 /*
  * This code is developed to demonstrate the use of ReactJS and ReactNatice
@@ -36,8 +36,8 @@ class App extends React.Component {
   */
 
  state = {
-  loginPage: "/login",
-  loginForm: window.location.pathname === "/login",
+  loginPage: '/login',
+  page: window.location.pathname,
   isUser: userIsLoggedIn(),
   mobileOpen: false,
   redirect: null,
@@ -52,7 +52,7 @@ class App extends React.Component {
   */
 
  static contextTypes = { router: PropTypes.object };
- componentDidMount() { requireLogin(this); }
+ componentDidMount() { pageRedirect(this); }
 
  /*
   * This code is developed to demonstrate the use of ReactJS and ReactNatice
