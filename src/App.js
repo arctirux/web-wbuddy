@@ -5,7 +5,7 @@
  * Copyright - World Food Programmes - Digital Transformation
  */
 
-import { React, PropTypes, Router, Route, Redirect } from "./includes/Commons";
+import { React, PropTypes, Router, Route } from "./includes/Commons";
 import { CssBaseline, Hidden, MuiThemeProvider, theme, withStyles, drawerWidth, styles } from "./theme/styles/index";
 
 /*
@@ -18,7 +18,7 @@ import { CssBaseline, Hidden, MuiThemeProvider, theme, withStyles, drawerWidth, 
 import "./theme/css/index.css";
 import { AllMenus } from "./includes/Menus";
 import { LeftSidebar, TopHeader } from "./layout";
-import { userIsLoggedIn, handleDrawerToggle } from "./includes/Functions";
+import { userIsLoggedIn, handleDrawerToggle, requireLogin } from "./includes/Functions";
 
 /*
  * This code is developed to demonstrate the use of ReactJS and ReactNatice
@@ -36,22 +36,23 @@ class App extends React.Component {
   */
 
  state = {
+  loginPage: "/login",
   loginForm: window.location.pathname === "/login",
   isUser: userIsLoggedIn(),
   mobileOpen: false,
+  redirect: null,
   title: "Home"
  };
 
- /*
+  /*
   * This code is developed to demonstrate the use of ReactJS and ReactNatice
   * The deelopment also allows me to demonstrate my capabilities using the framework
   * Following create-react-app methods, the file structure is made from scratch
   * Copyright - World Food Programmes - Digital Transformation
   */
 
- static contextTypes = {
-  router: PropTypes.object
- };
+ static contextTypes = { router: PropTypes.object };
+ componentDidMount() { requireLogin(this); }
 
  /*
   * This code is developed to demonstrate the use of ReactJS and ReactNatice
@@ -61,6 +62,7 @@ class App extends React.Component {
   */
 
  render() {
+   
   /*
    * This code is developed to demonstrate the use of ReactJS and ReactNatice
    * The deelopment also allows me to demonstrate my capabilities using the framework
@@ -70,7 +72,6 @@ class App extends React.Component {
 
   const This = this;
   const { classes } = This.props;
-  const { isUser, loginForm } = This.state;
   const Toggle = e => handleDrawerToggle(This);
   const PaperProps = { style: { width: drawerWidth } };
 
@@ -97,11 +98,7 @@ class App extends React.Component {
       <div className={classes.appContent}>
        <TopHeader this={This} onDrawerToggle={Toggle} />
        <main className={classes.mainContent}>
-        {!loginForm && !isUser ? (
-         <Redirect to="/login" />
-        ) : (
-         AllMenus.map(({ id: childId, active, path, component }) => <Route exact={true} path={path} component={component} key={childId} handler={component} />)
-        )}
+        { AllMenus.map(({ id: childId, active, path, component }) => <Route exact={true} path={path} component={component} key={childId} handler={component} />)}
        </main>
       </div>
      </div>
