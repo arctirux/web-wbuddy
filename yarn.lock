@@ -6466,6 +6466,13 @@ ms@^2.1.1:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
+msal@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/msal/-/msal-0.2.4.tgz#34ac608ebce0415da20ce946297e876ebebebd63"
+  integrity sha512-/DPtEBL8M4gwSjEYZy4ep+j1ZaawA9XEKJi4nPxmQLT85rLNZLARrxhIRwzwXtkPNewoB+zdoNKzETW8ZrTOFQ==
+  dependencies:
+    tslib "1.7.1"
+
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz#899f11d9686e5e05cb91b35d5f0e63b773cfc901"
@@ -8139,6 +8146,11 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-adal@^0.4.22:
+  version "0.4.22"
+  resolved "https://registry.yarnpkg.com/react-adal/-/react-adal-0.4.22.tgz#53f22c55a82dc764cb664960b3820c2b7615d871"
+  integrity sha512-jr0uCJtEF6FRCYftDr4FkjvmUh7g7cZH5joXdCCZTuF7qCsPKZYEJ+3/uJrGaa0ysCLVXR83VLRnqBs5toAgqA==
+
 react-app-polyfill@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-0.2.1.tgz#96c701a40b9671c8547f70bdbb4a47f4d5767790"
@@ -8212,11 +8224,6 @@ react-event-listener@^0.6.2:
     "@babel/runtime" "^7.2.0"
     prop-types "^15.6.0"
     warning "^4.0.1"
-
-react-google-login-component@^0.9.3:
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/react-google-login-component/-/react-google-login-component-0.9.3.tgz#e1f114bb7fc8d1791ae93de1d4e4c0608d3d745f"
-  integrity sha1-4fEUu3/I0Xka6T3h1OTAYI09dF8=
 
 react-google-login@^5.0.2:
   version "5.0.2"
@@ -9680,6 +9687,11 @@ ts-pnp@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.0.0.tgz#44a3a9e8c13fcb711bcda75d7b576c21af120c9d"
   integrity sha512-qgwM7eBrxFvZSXLtSvjf3c2mXwJOOGD49VlE+KocUGX95DuMdLc/psZHBnPpZL5b2NU7VtQGHRCWF3cNfe5kxQ==
+
+tslib@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.7.1.tgz#bc8004164691923a79fe8378bbeb3da2017538ec"
+  integrity sha1-vIAEFkaRkjp5/oN4u+s9ogF1OOw=
 
 tslib@^1.9.0:
   version "1.9.3"
