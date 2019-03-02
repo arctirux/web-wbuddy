@@ -52,7 +52,7 @@ class App extends React.Component {
   */
 
  static contextTypes = { router: PropTypes.object };
- componentDidMount() { pageRedirect(this); }
+ componentDidMount() { /* pageRedirect(this); */ }
 
  /*
   * This code is developed to demonstrate the use of ReactJS and ReactNatice
