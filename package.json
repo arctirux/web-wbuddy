@@ -9,6 +9,7 @@
     "express-favicon": "^2.0.1",
     "path": "^0.12.7",
     "react": "^16.8.3",
+    "react-adal": "^0.4.22",
     "react-avatar": "^3.5.0",
     "react-dom": "^16.8.3",
     "react-google-login": "^5.0.2",
