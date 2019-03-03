@@ -16,10 +16,9 @@ import { CssBaseline, Hidden, MuiThemeProvider, theme, withStyles, drawerWidth, 
  */
 
 import "./theme/css/index.css";
-import { Login } from "./components";
 import { AllMenus } from "./includes/Menus";
 import { LeftSidebar, TopHeader } from "./layout";
-import { userIsLoggedIn, handleDrawerToggle, pageRedirect } from "./includes/Functions";
+import { userIsLoggedIn, handleDrawerToggle, pageRedirect, getUser } from "./includes/Functions";
 
 /*
  * This code is developed to demonstrate the use of ReactJS and ReactNatice
@@ -27,6 +26,8 @@ import { userIsLoggedIn, handleDrawerToggle, pageRedirect } from "./includes/Fun
  * Following create-react-app methods, the file structure is made from scratch
  * Copyright - World Food Programmes - Digital Transformation
  */
+
+console.log(localStorage);
 
 class App extends React.Component {
  /*
@@ -36,10 +37,14 @@ class App extends React.Component {
   * Copyright - World Food Programmes - Digital Transformation
   */
 
+  
  state = {
   loginPage: '/login',
+  accessPage: '/access',
+  registerPage: '/register',
   page: window.location.pathname,
   isUser: userIsLoggedIn(),
+  user: getUser(),
   mobileOpen: false,
   redirect: null,
   title: "Home"
@@ -72,7 +77,7 @@ class App extends React.Component {
    */
 
   const This = this;
-  const { classes, isUser } = This.props;
+  const { classes } = This.props;
   const Toggle = e => handleDrawerToggle(This);
   const PaperProps = { style: { width: drawerWidth } };
 
@@ -99,7 +104,7 @@ class App extends React.Component {
       <div className={classes.appContent}>
        <TopHeader this={This} onDrawerToggle={Toggle} />
        <main className={classes.mainContent}>
-        { !isUser ? <Login /> : AllMenus.map(({ id: childId, active, path, component }) => 
+        { AllMenus.map(({ id: childId, active, path, component }) => 
         <Route exact={true} path={path} component={component} key={childId} handler={component} /> )}
        </main>
       </div>
