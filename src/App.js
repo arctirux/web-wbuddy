@@ -16,6 +16,7 @@ import { CssBaseline, Hidden, MuiThemeProvider, theme, withStyles, drawerWidth, 
  */
 
 import "./theme/css/index.css";
+import { Login } from "./components";
 import { AllMenus } from "./includes/Menus";
 import { LeftSidebar, TopHeader } from "./layout";
 import { userIsLoggedIn, handleDrawerToggle, pageRedirect } from "./includes/Functions";
@@ -71,7 +72,7 @@ class App extends React.Component {
    */
 
   const This = this;
-  const { classes } = This.props;
+  const { classes, isUser } = This.props;
   const Toggle = e => handleDrawerToggle(This);
   const PaperProps = { style: { width: drawerWidth } };
 
@@ -98,7 +99,8 @@ class App extends React.Component {
       <div className={classes.appContent}>
        <TopHeader this={This} onDrawerToggle={Toggle} />
        <main className={classes.mainContent}>
-        { AllMenus.map(({ id: childId, active, path, component }) => <Route exact={true} path={path} component={component} key={childId} handler={component} />)}
+        { !isUser ? <Login /> : AllMenus.map(({ id: childId, active, path, component }) => 
+        <Route exact={true} path={path} component={component} key={childId} handler={component} /> )}
        </main>
       </div>
      </div>
