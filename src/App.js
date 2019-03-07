@@ -27,9 +27,8 @@ import { userIsLoggedIn, handleDrawerToggle, pageRedirect, getUser } from "./inc
  * Copyright - World Food Programmes - Digital Transformation
  */
 
-console.log(localStorage);
-
 class App extends React.Component {
+  
  /*
   * This code is developed to demonstrate the use of ReactJS and ReactNatice
   * The deelopment also allows me to demonstrate my capabilities using the framework

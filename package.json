@@ -2,6 +2,12 @@
   "name": "web-wbuddy",
   "version": "0.1.0",
   "private": false,
+  "icon": "./assets/icon.png",
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "cover",
+    "backgroundColor": "#2196f3"
+  },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
