@@ -10,6 +10,7 @@
     "backgroundColor": "#2983C5"
   },
   "engines": {
+   "node": "^11.10.0"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
