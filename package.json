@@ -2,17 +2,24 @@
   "name": "web-wbuddy",
   "version": "0.1.0",
   "private": false,
+  "homepage": "http://arctirux.github.io/web-wbuddy",
   "icon": "./assets/icon.png",
   "splash": {
     "image": "./assets/splash.png",
     "resizeMode": "cover",
     "backgroundColor": "#2983C5"
   },
+  "engines": {
+    "npm": "6.7.0",
+    "yarn": "1.13.0",
+    "node": "11.10.0"
+  },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
     "express": "^4.16.4",
     "express-favicon": "^2.0.1",
+    "gh-pages": "^2.0.1",
     "js-cookie": "^2.2.0",
     "md5": "^2.2.1",
     "msal": "^0.2.4",
@@ -30,7 +37,9 @@
     "do": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
