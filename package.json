@@ -29,10 +29,10 @@
     "start": "node index.js",
     "do": "react-scripts start",
     "generate": "react-scripts build",
-    "build": "node index.js",
+    "build": "yarn install",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },  
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
