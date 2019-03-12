@@ -36,7 +36,7 @@
     "do": "react-scripts start",
     "generate": "react-scripts build",
     "test": "yarn install",
-    "start": "node index.js",
+    "start": "yarn do",
     "build": "yarn install",
     "eject": "node index.js"
   },
