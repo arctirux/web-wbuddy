@@ -2,7 +2,7 @@
   "name": "web-wbuddy",
   "version": "1.0.0",
   "private": false,
-  "homepage" : "http://arctirux.github.io/web-wbuddy",
+  "homepage" : "https://arctirux.github.io/web-wbuddy",
   "icon": "./assets/icon.png",
   "splash": {
     "resizeMode": "cover",
