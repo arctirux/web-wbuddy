@@ -8,6 +8,11 @@
     "resizeMode": "cover",
     "backgroundColor": "#2983C5"
   },
+  "engines": {
+    "npm": "6.7.0",
+    "yarn": "1.13.0",
+    "node": "11.10.0" 
+  },   
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
@@ -26,11 +31,12 @@
     "react-scripts": "2.1.5"
   },
   "scripts": {
+    "build": "yarn install",
     "start": "node index.js",
     "do": "react-scripts start",
     "generate": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"     
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +45,6 @@
     ">0.2%",
     "not dead",
     "not ie <= 11",
-    "not op_mini all"    
+    "not op_mini all"   
   ]
 }
