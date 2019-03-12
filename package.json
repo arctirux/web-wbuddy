@@ -35,10 +35,11 @@
   "scripts": {
     "start": "node index.js",
     "do": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn build",
+    "generate": "react-scripts build",
+    "build": "node index.js",
+    "predeploy": "yarn generate",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
