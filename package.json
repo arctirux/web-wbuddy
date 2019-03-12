@@ -2,7 +2,6 @@
   "name": "web-wbuddy",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://arctirux.github.io/web-wbuddy",
   "icon": "./assets/icon.png",
   "splash": {
     "image": "./assets/splash.png",
@@ -37,9 +36,7 @@
     "do": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
