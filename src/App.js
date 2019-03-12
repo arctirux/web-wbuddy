@@ -17,7 +17,7 @@ import { CssBaseline, Hidden, MuiThemeProvider, theme, withStyles, drawerWidth, 
 
 import "./theme/css/index.css";
 import { AllMenus } from "./includes/Menus";
-import { LeftSidebar, TopHeader } from "./layout";
+import { LeftSidebar, TopHeader } from "./layout/index.js";
 import { userIsLoggedIn, handleDrawerToggle, pageRedirect, getUser } from "./includes/Functions";
 
 /*
